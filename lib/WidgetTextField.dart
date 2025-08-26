@@ -15,6 +15,8 @@ void main() {
 
 class Body extends StatelessWidget {
   String textValue = "";
+
+  Body({super.key});
   @override
   Widget build(BuildContext context) {
     return Container(

@@ -12,14 +12,14 @@ void main() {
 
 class Body extends StatelessWidget {
   ScrollController scrollController = ScrollController();
-  Body() {
+  Body({super.key}) {
     scrollController.addListener(() {
       print("Scrolling $scrollController");
     });
   }
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: 232,
       child: ListView(
         padding: EdgeInsets.all(20),
@@ -64,6 +64,8 @@ class Body extends StatelessWidget {
 
 class Body2 extends StatelessWidget {
   ScrollController scrollController = ScrollController();
+
+  Body2({super.key});
   Body() {
     scrollController.addListener(() {
       print("Scrolling $scrollController");
@@ -72,7 +74,7 @@ class Body2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
         width: 232,
         child: ListView.separated(
           padding: EdgeInsets.all(20),

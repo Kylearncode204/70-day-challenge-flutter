@@ -12,7 +12,7 @@ void main() {
 
 class Body extends StatelessWidget {
   ScrollController scrollController = ScrollController();
-  Body() {
+  Body({super.key}) {
     scrollController.addListener(() {
       print("Scrolling $scrollController");
     });
